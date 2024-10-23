@@ -1,3 +1,4 @@
+||  Project by Pranav Sarnikar  ||
 This is the project "Smart Home Automation System'. In this project with the use of various smart devices we aim to create a monitoring system for the various gadgets.
 
 THINGS TO ADD:~
