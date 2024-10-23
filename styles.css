@@ -1,0 +1,200 @@
+/* Body Styling */
+body {
+    background-color: #f5f5dc;  /* Beige background color */
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    opacity: 0;  /* Start with the body fully transparent */
+    animation: fadeIn 1s ease-in-out forwards;  /* Apply the fade-in animation */
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;  /* Start fully transparent */
+    }
+    to {
+        opacity: 1;  /* End fully opaque */
+    }
+}
+
+/* Device Image Styling */
+.device-img {
+    align-items: center;
+    width: 120px;
+    height: 120px;
+    padding: 5px;
+    margin: 8px;
+    border: 1px solid rgb(175, 136, 136);
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s;
+}
+
+.device-img:hover {
+    transform: scale(1.2);
+}
+
+/* Text Styling Inside td */
+.device-text {
+    font-size: 14px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    color: #333333;  /* Darker text color for contrast */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);  /* Subtle text shadow */
+}
+
+/* Paragraph Text Aligning*/
+.P-text {
+    text-align:center;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333333;  /* Darker text color for contrast */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);  /* Subtle text shadow */
+}
+
+/* Header and Footer Styling */
+header {
+    background-color: #044554;  /* Slightly darker color for the banner */
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    background-color: #044554; /* Slightly darker color for the banner */
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+header h1 {
+    margin: 0;
+    font-family: 'Georgia', serif;
+}
+
+/* Navigation Styling */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Footer Styling */
+footer {
+    padding: 10px;
+    text-align: center;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+/* Navigation Styling */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;  /* Ensures padding and border apply correctly */
+    margin-right: 10px;
+    padding: 10px 15px;  /* Add padding inside each nav item */
+    border: 2px solid rgb(175, 136, 136);  /* Add a border around each nav item */
+    border-radius: 18px;  /* Optional: Adds rounded corners to the border */
+    transition: background-color 0.3s, border-color 0.3s;  /* Smooth transition for hover effects */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hover Effect for Navigation Items */
+nav ul li:hover {
+    background-color: #538bb6;  /* Darker shade on hover */
+    border-color: #f5f5dc;  /* Changes border color on hover */
+}
+/* Features Section Styling */
+#features {
+    background-color: #e1e1abe0;  /* Beige background color */
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;  /* Limit the width of the box */
+    border-radius: 10px;  /* Rounded corners for the box */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);  /* Subtle shadow around the box */
+    text-align: center;  /* Center align the text */
+}
+
+/* List Styling */
+#features ul {
+    list-style-type: disc;
+    padding: 0;
+    margin: 0;
+    display: inline-block;  /* Centers the list within the box */
+    text-align: left;  /* Aligns the list items to the left inside the box */
+}
+
+#features li {
+    margin: 10px 0;  /* Adds spacing between list items */
+    font-size: 16px;  /* Adjusts font size for readability */
+    font-family: Arial, sans-serif;  /* Consistent font family */
+}
+.device-mode {
+    position: relative; /* Positioning for the pseudo-element */
+    padding: 8px 6px; /* Adjusted padding for a smaller size */
+    background-color: rgba(0, 0, 0, 0.7); /* Dark background */
+    color: white; /* Text color */
+    font-weight: bold; /* Bold text */
+    border-radius: 5px; /* Rounded corners */
+    transition: transform 0.1s ease, background-color 0.3s ease; /* Smooth transitions */
+    overflow: hidden; /* Contain pseudo-element */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+.device-mode:before {
+    content: ""; /* Empty content for the pseudo-element */
+    position: absolute; /* Positioning */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    width: 100%; /* Adjusted size for the glow effect */
+    height: 100%; /* Adjusted size for the glow effect */
+    background: rgba(0, 255, 153, 0.624); /* Yellow background */
+    border-radius: 5%; /* Circular shape */
+    transform: translate(-50%, -50%) scale(0); /* Start scale */
+    transition: transform 0.3s ease; /* Smooth scaling */
+    z-index: 0; /* Layering */
+}
+
+.device-mode:hover:before {
+    transform: translate(-50%, -50%) scale(1); /* Scale up on hover */
+}
+
+.device-mode:hover {
+    transform: scale(0.95); /* Scale down on hover to simulate pressing */
+    background-color: rgba(0, 0, 0, 0.9); /* Darken background on hover */
+}
+
+.device-mode:hover span {
+    color: #fff; /* Change text color on hover */
+}
+
+.device-mode span {
+    position: relative; /* Positioning for text */
+    z-index: 1; /* Bring text above the pseudo-element */
+}
+
